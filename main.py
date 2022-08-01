@@ -34,8 +34,11 @@ def main(args):
                 cv2.destroyWindow("Label")
                 recognized_command = True
                 sys.exit(0)
-            # elif key == 119:  # w, skip image
-            #     continue
+            elif key == 119:  # w, skip image
+                recognized_command = True
+                print(
+                    f"[bold blue]Skipped[/bold blue] [bold white]image[/bold white] [bold yellow]{base_name}[/bold yellow]")
+                continue
             elif key == 92:  # \ pressed. Skip image.
                 recognized_command = True
                 print(
